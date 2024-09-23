@@ -1,15 +1,26 @@
+import { useState } from "react";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
-import Button from "../Button/Button";
+import NavbarButtons from "../NavbarButtons/NavbarButtons";
 import "./Navbar.scss";
 
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState<boolean>(false);
+
+  const handleShowMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <>
       <div className="navbar">
         <h1 className="navbar__heading">Recipe Book</h1>
-        <BurgerMenu />
+        <span onClick={handleShowMenu}>
+          <BurgerMenu toggle={showMenu} />
+        </span>
       </div>
-      <Button heading="Logout" />
+      <div className={`navbuttons--${showMenu}`}>
+        <NavbarButtons />
+      </div>
     </>
   );
 };

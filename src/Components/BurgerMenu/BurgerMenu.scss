@@ -19,5 +19,21 @@
     background-color: black;
     transform-origin: 1px;
     transition: all 0.3s linear;
+
+    &--true:first-child {
+      rotate: 45deg;
+    }
+
+    &--true:nth-child(2) {
+      background-color: white;
+    }
+
+    &--true:last-child {
+      rotate: -45deg;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }
