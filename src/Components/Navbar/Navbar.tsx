@@ -3,8 +3,8 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   return (
-    <div>
-      <h1>Recipe Book</h1>
+    <div className="navbar">
+      <h1 className="navbar__heading">Recipe Book</h1>
       <BurgerMenu />
     </div>
   );
