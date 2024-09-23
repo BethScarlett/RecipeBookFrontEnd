@@ -1,3 +1,5 @@
+@use "../assets/Styling/Variables/variables" as *;
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +9,10 @@
 body {
   min-height: 100dvh;
   height: fit-content;
-  background: linear-gradient(#e66465, #9198e5);
+  background: linear-gradient(
+    $homepage-background-primary,
+    $homepage-background-secondary
+  );
   background-size: 200% 200%;
   animation: scroll-colour 15s ease infinite;
 }
