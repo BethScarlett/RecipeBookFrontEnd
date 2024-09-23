@@ -1,0 +1,51 @@
+@use "../../assets/Styling/Variables/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__heading {
+    padding-top: 2px;
+    font-size: 38px;
+    font-family: $navbar_heading;
+  }
+}
+
+.navbuttons--true {
+  animation: fade-in 0.3s;
+}
+
+.navbuttons--false {
+  visibility: hidden;
+  animation: fade-out 0.3s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    margin-top: -10px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+    margin-top: -10px;
+  }
+}
