@@ -1,9 +1,10 @@
-import Navbar from "./Components/Navbar/Navbar";
+import "./App.scss";
+import HomePage from "./Pages/HomePage";
 
 const App = () => {
   return (
     <div>
-      <Navbar />
+      <HomePage />
     </div>
   );
 };

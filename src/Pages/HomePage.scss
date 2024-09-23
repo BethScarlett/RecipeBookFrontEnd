@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  height: fit-content;
+  background: linear-gradient(#e66465, #9198e5);
+  background-size: 200% 200%;
+  animation: scroll-colour 15s ease infinite;
+}
+
+@keyframes scroll-colour {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
+}
