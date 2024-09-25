@@ -1,3 +1,5 @@
+@use "../../assets/Styling/Variables/variables" as *;
+
 * {
     margin: 0;
     padding: 0;
@@ -19,8 +21,23 @@
     margin-top: 10px;
     text-align: center;
 
+
+    &__heading {
+        font-size: 34px;
+        font-family: $recipeCard-heading;
+        margin-bottom: -10px; 
+    }
+
     &__image {
         height: 90px;
         width: 90px;
+    }
+
+    &__description {
+        font-family: $recipeCard-description;
+    }
+
+    &__suitable {
+        font-family: $recipeCard-suitable;
     }
 }
