@@ -16,7 +16,7 @@ const RecipeCard = ({ name, description, category }: RecipeCardProps) => {
         src={placeholderImg}
         alt="Image of dish"
       />
-      <p className="recipe-card__description">{description}</p>
+      <p className="recipe-card__description">"{description}"</p>
       <p className="recipe-card__suitable">Category: {category}</p>
     </div>
   );
