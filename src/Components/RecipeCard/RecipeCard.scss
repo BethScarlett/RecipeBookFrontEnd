@@ -1,0 +1,59 @@
+@use "../../assets/Styling/Variables/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 300px;
+  width: 78dvw;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: greenyellow;
+  padding: 10px 15px;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  transition: all 0.2s linear;
+  animation: intro 0.5s ease forwards;
+
+  &__heading {
+    font-size: 34px;
+    font-family: $recipeCard-heading;
+    margin-bottom: -10px;
+  }
+
+  &__image {
+    height: 90px;
+    width: 90px;
+  }
+
+  &__description {
+    font-family: $recipeCard-description;
+  }
+
+  &__suitable {
+    font-family: $recipeCard-suitable;
+  }
+
+  &:hover {
+    box-shadow: 0 5px 0 0 black;
+    scale: 1.05;
+    transition: all 0.2s linear;
+  }
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
