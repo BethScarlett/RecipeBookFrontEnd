@@ -16,7 +16,6 @@ const HomePage = () => {
           />
         </div>
       ))}
-      {/* <RecipeCard /> */}
     </div>
   );
 };

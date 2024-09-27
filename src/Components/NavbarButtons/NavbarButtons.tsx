@@ -5,9 +5,9 @@ const NavbarButtons = () => {
   return (
     <div className="navbar-buttons">
       <Button heading="Home" />
-      <Button heading="Create" />
-      <Button heading="Update" />
-      <Button heading="Logout" />
+      <Button heading="Create (WIP)" />
+      <Button heading="Update (WIP)" />
+      <Button heading="Logout (WIP)" />
     </div>
   );
 };
