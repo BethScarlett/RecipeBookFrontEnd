@@ -8,7 +8,7 @@
 
 .navButton {
   min-height: 30px;
-  min-width: 60px;
+  min-width: 89px;
   border: none;
   border-radius: 5px;
   background-color: $navbutton-background;
@@ -16,6 +16,7 @@
   font-weight: bold;
   color: $navbutton-text;
   transition: all 0.2s linear;
+  margin-top: 3px;
 
   &:hover {
     box-shadow: inset 0 0 5px 1px $navbutton-hover;
