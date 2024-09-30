@@ -17,6 +17,13 @@ body {
   animation: scroll-colour 15s ease infinite;
 }
 
+.homepage__search {
+  display: flex;
+  width: 50dvw;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
 @keyframes scroll-colour {
   0% {
     background-position: 10% 0%;
