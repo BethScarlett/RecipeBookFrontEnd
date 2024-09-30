@@ -1,13 +1,17 @@
-import { useEffect, useState } from "react";
+import { MouseEventHandler, useEffect, useState } from "react";
 import Recipe from "../../Types/recipe";
 import "./CategoryButtons.scss";
 import Button from "../Button/Button";
 
 type CategoryButtonsProps = {
   filteredRecipes: Recipe[];
+  handleFilterByCategory: MouseEventHandler<HTMLButtonElement>;
 };
 
-const CategoryButtons = ({ filteredRecipes }: CategoryButtonsProps) => {
+const CategoryButtons = ({
+  filteredRecipes,
+  handleFilterByCategory,
+}: CategoryButtonsProps) => {
   const [distinctCategories, setDistinctCategories] = useState<string[]>([]);
 
   useEffect(() => {
@@ -26,9 +30,9 @@ const CategoryButtons = ({ filteredRecipes }: CategoryButtonsProps) => {
 
   return (
     <div>
-      <Button heading="All" />
+      <Button heading="All" buttonFunc={handleFilterByCategory} />
       {distinctCategories.map((category) => (
-        <Button heading={category} />
+        <Button heading={category} buttonFunc={handleFilterByCategory} />
       ))}
     </div>
   );

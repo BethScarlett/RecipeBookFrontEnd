@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import RecipeCard from "../Components/RecipeCard/RecipeCard";
 import Recipes from "../Data/Recipes";
@@ -11,10 +11,13 @@ const HomePage = () => {
     ...Recipes,
   ]);
 
-  const filterByName = (searchTerm: string) => {
+  const handleFilterRecipes = (searchTerm: string) => {
     setFilteredRecipes(
       Recipes.filter((recipe) => {
-        if (recipe.name.toLowerCase().includes(searchTerm)) {
+        if (
+          recipe.name.toLowerCase().includes(searchTerm) ||
+          recipe.category.includes(searchTerm)
+        ) {
           return recipe;
         }
       })
@@ -23,7 +26,17 @@ const HomePage = () => {
 
   const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
     const cleanInput: string = e.currentTarget.value.toLowerCase();
-    filterByName(cleanInput);
+    handleFilterRecipes(cleanInput);
+  };
+
+  const handleFilterByCategory = (e: FormEvent<HTMLButtonElement>) => {
+    let searchTerm: string = e.currentTarget.id;
+    if (searchTerm == "All") {
+      searchTerm = "";
+    }
+    console.log("Search term is " + searchTerm);
+
+    handleFilterRecipes(searchTerm);
   };
 
   return (
@@ -35,7 +48,10 @@ const HomePage = () => {
         placeholder="Search ..."
         onChange={handleInput}
       />
-      <CategoryButtons filteredRecipes={filteredRecipes} />
+      <CategoryButtons
+        filteredRecipes={filteredRecipes}
+        handleFilterByCategory={handleFilterByCategory}
+      />
       {filteredRecipes.map((recipe) => (
         <div key={recipe.id}>
           <RecipeCard
