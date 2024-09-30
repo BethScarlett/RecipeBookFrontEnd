@@ -13,25 +13,27 @@ const HomePage = () => {
   const filterByName = (searchTerm: string) => {
     setFilteredRecipes(
       Recipes.filter((recipe) => {
-        if (recipe.name.includes(searchTerm)) {
+        if (recipe.name.toLowerCase().includes(searchTerm)) {
           return recipe;
         }
       })
     );
-    console.log(filteredRecipes);
   };
 
   const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
-    const cleanInput: string =
-      e.currentTarget.value.slice(0, 1).toUpperCase() +
-      e.currentTarget.value.slice(1);
+    const cleanInput: string = e.currentTarget.value.toLowerCase();
     filterByName(cleanInput);
   };
 
   return (
-    <div>
+    <div className="homepage">
       <Navbar />
-      <input type="text" placeholder="Search ..." onChange={handleInput} />
+      <input
+        className="homepage__search"
+        type="text"
+        placeholder="Search ..."
+        onChange={handleInput}
+      />
       {filteredRecipes.map((recipe) => (
         <div key={recipe.id}>
           <RecipeCard
