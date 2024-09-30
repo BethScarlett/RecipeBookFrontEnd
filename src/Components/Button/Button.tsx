@@ -26,7 +26,7 @@ const Button = ({
 
   return (
     <button
-      className={`custButton custButton__${buttonType}--${variant}`}
+      className={`custButton custButton__${buttonType} custButton__${buttonType}--${variant}`}
       id={heading}
       onClick={buttonFunc}
     >

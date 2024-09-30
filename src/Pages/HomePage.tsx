@@ -53,7 +53,7 @@ const HomePage = () => {
       />
       <CategoryButtons
         selectedCategory={selectedCategory}
-        filteredRecipes={Recipes}
+        recipes={Recipes}
         handleFilterByCategory={handleFilterByCategory}
       />
       {filteredRecipes.map((recipe) => (

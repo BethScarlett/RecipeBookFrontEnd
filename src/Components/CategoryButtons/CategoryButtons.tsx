@@ -5,24 +5,24 @@ import Button from "../Button/Button";
 
 type CategoryButtonsProps = {
   selectedCategory: string;
-  filteredRecipes: Recipe[];
+  recipes: Recipe[];
   handleFilterByCategory: MouseEventHandler<HTMLButtonElement>;
 };
 
 const CategoryButtons = ({
   selectedCategory,
-  filteredRecipes,
+  recipes,
   handleFilterByCategory,
 }: CategoryButtonsProps) => {
   const [distinctCategories, setDistinctCategories] = useState<string[]>([]);
 
   useEffect(() => {
     getDistinctCategories();
-  }, [filteredRecipes]);
+  }, [recipes]);
 
   const getDistinctCategories = () => {
     const filteredCategories: string[] = [];
-    filteredRecipes.map((recipe) => {
+    recipes.map((recipe) => {
       if (!filteredCategories.includes(recipe.category)) {
         filteredCategories.push(recipe.category);
       }

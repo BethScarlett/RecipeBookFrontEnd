@@ -11,16 +11,21 @@
   min-width: 89px;
   border: none;
   border-radius: 5px;
-  background-color: $navbutton-background;
   font-family: $button-heading;
   font-weight: bold;
-  color: $navbutton-text;
   transition: all 0.2s linear;
   margin-top: 3px;
 
+  &__navbutton {
+    color: $navbutton-text;
+    background-color: $navbutton-background;
+  }
+
   &__category {
+    color: $catbutton-text;
+    background-color: $catbutton-background;
     &--on {
-      background-color: red;
+      background-color: $catbutton-background-selected;
     }
   }
 
