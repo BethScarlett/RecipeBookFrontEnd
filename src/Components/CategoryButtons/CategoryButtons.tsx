@@ -4,11 +4,13 @@ import "./CategoryButtons.scss";
 import Button from "../Button/Button";
 
 type CategoryButtonsProps = {
+  selectedCategory: string;
   filteredRecipes: Recipe[];
   handleFilterByCategory: MouseEventHandler<HTMLButtonElement>;
 };
 
 const CategoryButtons = ({
+  selectedCategory,
   filteredRecipes,
   handleFilterByCategory,
 }: CategoryButtonsProps) => {
@@ -29,10 +31,20 @@ const CategoryButtons = ({
   };
 
   return (
-    <div>
-      <Button heading="All" buttonFunc={handleFilterByCategory} />
+    <div className="category-buttons">
+      <Button
+        heading="All"
+        selectedCategory={selectedCategory}
+        buttonFunc={handleFilterByCategory}
+        buttonType="category"
+      />
       {distinctCategories.map((category) => (
-        <Button heading={category} buttonFunc={handleFilterByCategory} />
+        <Button
+          heading={category}
+          selectedCategory={selectedCategory}
+          buttonFunc={handleFilterByCategory}
+          buttonType="category"
+        />
       ))}
     </div>
   );

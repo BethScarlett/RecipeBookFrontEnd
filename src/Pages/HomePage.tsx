@@ -10,6 +10,7 @@ const HomePage = () => {
   const [filteredRecipes, setFilteredRecipes] = useState<Recipe[]>([
     ...Recipes,
   ]);
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
   const handleFilterRecipes = (searchTerm: string) => {
     setFilteredRecipes(
@@ -24,19 +25,21 @@ const HomePage = () => {
     );
   };
 
-  const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
-    const cleanInput: string = e.currentTarget.value.toLowerCase();
-    handleFilterRecipes(cleanInput);
-  };
-
   const handleFilterByCategory = (e: FormEvent<HTMLButtonElement>) => {
     let searchTerm: string = e.currentTarget.id;
+    setSelectedCategory(searchTerm);
+
     if (searchTerm == "All") {
       searchTerm = "";
     }
-    console.log("Search term is " + searchTerm);
 
     handleFilterRecipes(searchTerm);
+  };
+
+  const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
+    const cleanInput: string = e.currentTarget.value.toLowerCase();
+    setSelectedCategory("All");
+    handleFilterRecipes(cleanInput);
   };
 
   return (
@@ -49,7 +52,8 @@ const HomePage = () => {
         onChange={handleInput}
       />
       <CategoryButtons
-        filteredRecipes={filteredRecipes}
+        selectedCategory={selectedCategory}
+        filteredRecipes={Recipes}
         handleFilterByCategory={handleFilterByCategory}
       />
       {filteredRecipes.map((recipe) => (
