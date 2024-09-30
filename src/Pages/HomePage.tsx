@@ -4,6 +4,7 @@ import RecipeCard from "../Components/RecipeCard/RecipeCard";
 import Recipes from "../Data/Recipes";
 import Recipe from "../Types/recipe";
 import "./HomePage.scss";
+import CategoryButtons from "../Components/CategoryButtons/CategoryButtons";
 
 const HomePage = () => {
   const [filteredRecipes, setFilteredRecipes] = useState<Recipe[]>([
@@ -34,6 +35,7 @@ const HomePage = () => {
         placeholder="Search ..."
         onChange={handleInput}
       />
+      <CategoryButtons filteredRecipes={filteredRecipes} />
       {filteredRecipes.map((recipe) => (
         <div key={recipe.id}>
           <RecipeCard
