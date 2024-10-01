@@ -38,6 +38,22 @@
     font-family: $recipeCard-description;
   }
 
+  &__ingredients {
+    text-decoration: underline;
+  }
+
+  &__steps {
+    text-decoration: underline;
+  }
+
+  &__ingredient {
+    font-size: 12px;
+  }
+
+  &__step {
+    font-size: 12px;
+  }
+
   &__suitable {
     font-family: $recipeCard-suitable;
   }
