@@ -1,8 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import Navbar from "../../Components/Navbar/Navbar";
 import RecipeCard from "../../Components/RecipeCard/RecipeCard";
 import Recipes from "../../Data/Recipes";
-import Recipe from "../../Types/recipe";
+import Recipe from "../../Types/Recipe";
 import "./HomePage.scss";
 import CategoryButtons from "../../Components/CategoryButtons/CategoryButtons";
 import { Link } from "react-router-dom";
@@ -45,7 +44,6 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
-      <Navbar />
       <input
         className="homepage__search"
         type="text"
