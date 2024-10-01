@@ -1,4 +1,4 @@
-import Recipe from "../Types/recipe";
+import Recipe from "../Types/Recipe";
 
 const Recipes: Recipe[] = [
   {
