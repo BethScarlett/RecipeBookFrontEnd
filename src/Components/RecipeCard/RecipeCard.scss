@@ -22,6 +22,7 @@
   text-align: center;
   transition: all 0.2s linear;
   animation: intro 0.5s ease forwards;
+  color: $recipecard-text;
 
   &__heading {
     font-size: 32px;

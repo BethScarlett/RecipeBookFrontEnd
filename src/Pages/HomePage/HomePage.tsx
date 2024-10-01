@@ -1,10 +1,11 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import Navbar from "../Components/Navbar/Navbar";
-import RecipeCard from "../Components/RecipeCard/RecipeCard";
-import Recipes from "../Data/Recipes";
-import Recipe from "../Types/recipe";
+import Navbar from "../../Components/Navbar/Navbar";
+import RecipeCard from "../../Components/RecipeCard/RecipeCard";
+import Recipes from "../../Data/Recipes";
+import Recipe from "../../Types/recipe";
 import "./HomePage.scss";
-import CategoryButtons from "../Components/CategoryButtons/CategoryButtons";
+import CategoryButtons from "../../Components/CategoryButtons/CategoryButtons";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const [filteredRecipes, setFilteredRecipes] = useState<Recipe[]>([
@@ -57,13 +58,17 @@ const HomePage = () => {
         handleFilterByCategory={handleFilterByCategory}
       />
       {filteredRecipes.map((recipe) => (
-        <div key={recipe.id}>
+        <Link
+          key={recipe.id}
+          to={`/recipe/${recipe.id}`}
+          style={{ textDecoration: "none" }}
+        >
           <RecipeCard
             name={recipe.name}
             description={recipe.description}
             category={recipe.category}
           />
-        </div>
+        </Link>
       ))}
     </div>
   );
