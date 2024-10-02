@@ -10,7 +10,7 @@ const App = () => {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/RecipeBookFrontEnd" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/recipe/:id" element={<RecipePage />} />
         </Routes>
       </BrowserRouter>
