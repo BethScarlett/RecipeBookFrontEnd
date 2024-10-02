@@ -1,5 +1,5 @@
 import "./ExpandedRecipeCard.scss";
-import placeholderImg from "../../../public/Images/food-placeholder.png";
+import placeholderImg from "/images/food-placeholder.png";
 import Recipe from "../../Types/Recipe";
 import Ingredient from "../../Types/Ingredient";
 import Step from "../../Types/Step";
