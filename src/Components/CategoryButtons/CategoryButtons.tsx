@@ -1,5 +1,5 @@
 import { MouseEventHandler, useEffect, useState } from "react";
-import Recipe from "../../Types/recipe";
+import Recipe from "../../Types/Recipe";
 import "./CategoryButtons.scss";
 import Button from "../Button/Button";
 
