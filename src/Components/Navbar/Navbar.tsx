@@ -18,7 +18,7 @@ const Navbar = () => {
           <BurgerMenu toggle={showMenu} />
         </span>
       </div>
-      <div className={`navbuttons--${showMenu}`}>
+      <div className={`navbuttons navbuttons--${showMenu}`}>
         <NavbarButtons />
       </div>
     </>
