@@ -55,19 +55,21 @@ const HomePage = () => {
         recipes={Recipes}
         handleFilterByCategory={handleFilterByCategory}
       />
-      {filteredRecipes.map((recipe) => (
-        <Link
-          key={recipe.id}
-          to={`/recipe/${recipe.id}`}
-          style={{ textDecoration: "none" }}
-        >
-          <RecipeCard
-            name={recipe.name}
-            description={recipe.description}
-            category={recipe.category}
-          />
-        </Link>
-      ))}
+      <div className="homepage__cards">
+        {filteredRecipes.map((recipe) => (
+          <Link
+            key={recipe.id}
+            to={`/recipe/${recipe.id}`}
+            style={{ textDecoration: "none" }}
+          >
+            <RecipeCard
+              name={recipe.name}
+              description={recipe.description}
+              category={recipe.category}
+            />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

@@ -20,8 +20,17 @@ body {
 .homepage__search {
   display: flex;
   width: 50dvw;
+  max-width: 208.4px;
   margin: auto;
   margin-bottom: 15px;
+}
+
+.homepage__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  //align-items: center;
+  margin: auto;
 }
 
 @keyframes scroll-colour {
