@@ -23,19 +23,27 @@ const ExpandedRecipeCard = ({
         src={placeholderImg}
         alt="Image of dish"
       />
-      <p className="expanded-card__description">Description</p>
-      <p className="expanded-card__ingredients">Ingredients</p>
-      {filteredIngredient.map((ingredient) => (
-        <p className="expanded-card__ingredient" key={ingredient.id}>
-          {ingredient.name}
-        </p>
-      ))}
-      <p className="expanded-card__steps">Steps</p>
-      {filteredStep.map((step) => (
-        <p className="expanded-card__step" key={step.id}>
-          {step.step_number}: {step.step}
-        </p>
-      ))}
+      <p className="expanded-card__description">
+        {filteredRecipe[0].description}
+      </p>
+      <div className="expanded-card__info">
+        <div className="expanded-card__ingredients">
+          Ingredients
+          {filteredIngredient.map((ingredient) => (
+            <p className="expanded-card__ingredient" key={ingredient.id}>
+              {ingredient.name}
+            </p>
+          ))}
+        </div>
+        <div className="expanded-card__steps">
+          Steps
+          {filteredStep.map((step) => (
+            <p className="expanded-card__step" key={step.id}>
+              {step.step_number}: {step.step}
+            </p>
+          ))}
+        </div>
+      </div>
       <p className="expanded-card__category">
         Category: {filteredRecipe[0].category}
       </p>
