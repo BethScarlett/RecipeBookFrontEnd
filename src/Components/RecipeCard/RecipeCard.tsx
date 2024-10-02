@@ -1,5 +1,5 @@
 import "./RecipeCard.scss";
-import placeholderImg from "../../assets/Images/food-placeholder.png";
+import placeholderImg from "../../../public/Images/food-placeholder.png";
 
 type RecipeCardProps = {
   name: string;
