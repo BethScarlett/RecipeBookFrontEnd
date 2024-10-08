@@ -2,8 +2,8 @@
   "name": "recipebookfrontend",
   "private": true,
   "version": "0.0.0",
-  "author": "Bethany Burrows",
   "homepage": "https://BethScarlett.github.io/RecipeBookFrontEnd",
+  "author": "Bethany Burrows",
   "type": "module",
   "scripts": {
     "dev": "vite",
