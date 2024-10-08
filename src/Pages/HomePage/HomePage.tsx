@@ -59,7 +59,7 @@ const HomePage = () => {
         {filteredRecipes.map((recipe) => (
           <Link
             key={recipe.id}
-            to={`/recipe/${recipe.id}`}
+            to={`/RecipeBookFrontEnd/${recipe.id}`}
             style={{ textDecoration: "none" }}
           >
             <RecipeCard

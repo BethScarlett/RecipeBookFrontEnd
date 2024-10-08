@@ -44,6 +44,7 @@ const CategoryButtons = ({
           selectedCategory={selectedCategory}
           buttonFunc={handleFilterByCategory}
           buttonType="category"
+          key={Math.random()}
         />
       ))}
     </div>
