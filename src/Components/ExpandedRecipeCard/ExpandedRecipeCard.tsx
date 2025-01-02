@@ -24,7 +24,7 @@ const ExpandedRecipeCard = ({
         alt="Image of dish"
       />
       <p className="expanded-card__description">
-        {filteredRecipe[0].description}
+        {'"' + filteredRecipe[0].description + '"'}
       </p>
       <div className="expanded-card__info">
         <div className="expanded-card__ingredients">
