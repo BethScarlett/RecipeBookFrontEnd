@@ -8,9 +8,7 @@ const NavbarButtons = () => {
       <Link to="/RecipeBookFrontEnd/">
         <Button heading="Home" buttonType="navbutton" />
       </Link>
-      <Button heading="Create (WIP)" buttonType="navbutton" />
-      <Button heading="Update (WIP)" buttonType="navbutton" />
-      <Button heading="Logout (WIP)" buttonType="navbutton" />
+      <Button heading="Random" buttonType="navbutton" />
     </div>
   );
 };
