@@ -7,7 +7,6 @@ const Recipes: Recipe[] = [
     name: "Spaghetti Bolognese",
     description: "A super simple spag bol.",
     category: "Meat",
-    user_id: 1,
   },
   {
     id: 2,
@@ -15,7 +14,6 @@ const Recipes: Recipe[] = [
     name: "Bread",
     description: "A lovely fresh loaf.",
     category: "Baked Goods",
-    user_id: 1,
   },
   {
     id: 3,
@@ -23,7 +21,6 @@ const Recipes: Recipe[] = [
     name: "Chicken & Leek Pie",
     description: "Chicken, leek and delicious gravy encased in pastry.",
     category: "Meat",
-    user_id: 2,
   },
   {
     id: 4,
@@ -31,7 +28,6 @@ const Recipes: Recipe[] = [
     name: "Cake",
     description: "Simple vanilla sponge cake.",
     category: "Sweet Treats",
-    user_id: 1,
   },
   {
     id: 5,
@@ -39,7 +35,6 @@ const Recipes: Recipe[] = [
     name: "Cajun Chicken",
     description: "One pot goodness with a cajun kick.",
     category: "Meat",
-    user_id: 3,
   },
 ];
 

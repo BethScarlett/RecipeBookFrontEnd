@@ -4,7 +4,6 @@ type Recipe = {
   name: string;
   description: string;
   category: string;
-  user_id: number;
 };
 
 export default Recipe;
